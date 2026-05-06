@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0d2b1a">
+
+<title>Yatay Sondaj Nedir? Kazısız Altyapı Hakkında Her Şey</title>
+<meta name="description" content="Yatay sondaj nedir, nasıl çalışır? Şehrinizin altındaki boru ve kablolar nasıl döşeniyor? Kazısız geçiş teknolojisini herkes için anlatan rehber.">
+<meta name="keywords" content="yatay sondaj nedir, kazısız boru döşeme, yol açmadan boru, yatay delgi nedir, şehir altyapısı nasıl yapılır, boru döşeme">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.yataysondaj.org/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="Yatay Sondaj Nedir? — Kazısız Altyapıyı Anla">
+<meta property="og:description" content="Şehrinizin altındaki boru hatları nasıl döşeniyor? Yol açmadan, çevre bozmadan — kazısız geçiş teknolojisini anlatan kapsamlı rehber.">
+<meta property="og:url" content="https://www.yataysondaj.org/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Yatay Sondaj — Kazısız Altyapı Rehberi",
+  "url": "https://www.yataysondaj.org",
+  "description": "Yatay sondaj ve kazısız altyapı teknolojisi hakkında genel halk için kapsamlı rehber.",
+  "inLanguage": "tr-TR"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Yatay sondaj nedir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yatay sondaj, caddeleri açmadan yer altına boru veya kablo döşemeyi sağlayan bir teknolojidir. Giriş ve çıkış noktası açılır, aradaki yüzlerce metrelik mesafe yer altından geçilir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Yatay sondaj neden önemli?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Şehirlerde altyapı çalışmaları haftalarca trafik kapatmaya neden olabilir. Yatay sondaj ile aynı işlem günler içinde, trafik kapatılmadan yapılır. Hem hız hem çevre hem de maliyet avantajı sağlar."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:wght@300;400;600&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230d2b1a'/%3E%3Cpath d='M20 60 Q50 30 80 60' fill='none' stroke='%2386efac' stroke-width='8' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --forest: #0d2b1a;
+    --forest-2: #1a4a2e;
+    --forest-3: #245c3a;
+    --leaf: #86efac;
+    --leaf-dim: #4ade80;
+    --leaf-pale: #dcfce7;
+    --cream: #fdfbf7;
+    --cream-2: #f5f0e8;
+    --sand: #e8dfc8;
+    --text: #1a2e1e;
+    --text-2: #3d5a44;
+    --text-3: #6b8f74;
+    --warm: #d97706;
+    --warm-pale: #fef3c7;
+    --line: rgba(26, 46, 30, 0.1);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--text);
+    font-family: 'Source Serif 4', serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--forest-2); text-decoration: none; }
+
+  /* Topbar */
+  .topbar {
+    background: var(--forest);
+    color: rgba(255,255,255,0.7);
+    font-size: 13px;
+    font-family: 'Source Code Pro', monospace;
+    padding: 8px 24px;
+    text-align: center;
+    letter-spacing: 0.02em;
+  }
+
+  .topbar a { color: var(--leaf); text-decoration: underline; }
+
+  /* Header */
+  header {
+    background: var(--cream);
+    border-bottom: 2px solid var(--forest);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .logo-main {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--forest);
+    line-height: 1;
+    letter-spacing: -0.01em;
+  }
+
+  .logo-sub {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 10px;
+    color: var(--text-3);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  nav.site-nav a {
+    font-family: 'Source Serif 4', serif;
+    font-size: 15px;
+    color: var(--text-2);
+    margin-left: 32px;
+    transition: color 0.2s;
+  }
+
+  nav.site-nav a:hover { color: var(--forest); text-decoration: underline; }
+
+  .nav-cta {
+    margin-left: 32px;
+    background: var(--forest);
+    color: var(--leaf) !important;
+    padding: 10px 20px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    text-decoration: none !important;
+    transition: background 0.2s;
+  }
+
+  .nav-cta:hover { background: var(--forest-3); }
+
+  /* Hero */
+  .hero {
+    background: var(--forest);
+    color: white;
+    padding: 90px 32px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Organic background shapes */
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .hero-bg-shape {
+    position: absolute;
+    border-radius: 60% 40% 50% 50% / 50% 50% 40% 60%;
+    opacity: 0.05;
+    background: var(--leaf);
+  }
+
+  .hero-bg-shape:nth-child(1) {
+    width: 500px; height: 400px;
+    top: -100px; right: -80px;
+    animation: float1 12s ease-in-out infinite;
+  }
+
+  .hero-bg-shape:nth-child(2) {
+    width: 300px; height: 350px;
+    bottom: -80px; right: 200px;
+    animation: float2 10s ease-in-out infinite;
+    opacity: 0.03;
+  }
+
+  @keyframes float1 {
+    0%, 100% { transform: translate(0,0) rotate(0deg); }
+    50% { transform: translate(-20px, 20px) rotate(5deg); }
+  }
+
+  @keyframes float2 {
+    0%, 100% { transform: translate(0,0) rotate(0deg); }
+    50% { transform: translate(20px, -15px) rotate(-3deg); }
+  }
+
+  .hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 12px;
+    color: var(--leaf);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 28px;
+    background: rgba(134, 239, 172, 0.1);
+    padding: 8px 16px;
+    border-radius: 2px;
+    border: 1px solid rgba(134, 239, 172, 0.2);
+  }
+
+  .hero-tag svg { width: 14px; height: 14px; fill: var(--leaf); }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 5.5vw, 76px);
+    line-height: 1.1;
+    font-weight: 900;
+    margin-bottom: 28px;
+    letter-spacing: -0.02em;
+    max-width: 900px;
+  }
+
+  h1 span { color: var(--leaf); }
+
+  .hero-lead {
+    font-size: 19px;
+    color: rgba(255,255,255,0.75);
+    max-width: 640px;
+    line-height: 1.7;
+    margin-bottom: 44px;
+    font-weight: 300;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .btn-primary {
+    background: var(--leaf);
+    color: var(--forest);
+    padding: 15px 30px;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 700;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-primary:hover { background: var(--leaf-dim); transform: translateY(-2px); }
+
+  .btn-ghost {
+    color: rgba(255,255,255,0.7);
+    font-family: 'Source Code Pro', monospace;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    text-decoration: underline;
+    transition: color 0.2s;
+  }
+
+  .btn-ghost:hover { color: var(--leaf); }
+
+  /* Number bar */
+  .numbar {
+    background: var(--sand);
+    border-top: 2px solid var(--forest);
+    border-bottom: 2px solid var(--forest);
+  }
+
+  .numbar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .num-item {
+    padding: 32px 24px;
+    border-right: 1px solid var(--line);
+  }
+
+  .num-item:last-child { border-right: none; }
+
+  .num-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    font-weight: 900;
+    color: var(--forest);
+    line-height: 1;
+    margin-bottom: 6px;
+    letter-spacing: -0.02em;
+  }
+
+  .num-value span { color: var(--forest-3); font-size: 22px; }
+
+  .num-label {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 11px;
+    color: var(--text-3);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* Sections */
+  .section { padding: 96px 32px; }
+  .section-inner { max-width: 1200px; margin: 0 auto; }
+
+  .eyebrow {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--forest-3);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .eyebrow::after { content: ''; flex: 1; max-width: 60px; height: 1px; background: var(--forest-3); }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 3.5vw, 48px);
+    font-weight: 900;
+    color: var(--forest);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+
+  .section-lead {
+    font-size: 18px;
+    color: var(--text-2);
+    max-width: 680px;
+    line-height: 1.7;
+    margin-bottom: 60px;
+    font-weight: 300;
+  }
+
+  /* Explainer section */
+  .explainer { background: var(--cream); }
+
+  .explain-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+    margin-bottom: 80px;
+  }
+
+  .explain-text p {
+    font-size: 17px;
+    color: var(--text-2);
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  .explain-text strong { color: var(--forest); }
+
+  .explain-text .highlight {
+    background: var(--leaf-pale);
+    border-left: 4px solid var(--forest-3);
+    padding: 20px 24px;
+    margin: 28px 0;
+    font-size: 16px;
+    color: var(--forest);
+    font-style: italic;
+  }
+
+  /* Visual timeline */
+  .explain-visual {
+    background: var(--forest);
+    padding: 40px;
+    border-radius: 2px;
+    color: white;
+    position: sticky;
+    top: 90px;
+  }
+
+  .visual-title {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 11px;
+    color: var(--leaf);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 28px;
+  }
+
+  .step-visual {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    align-items: start;
+  }
+
+  .step-circle {
+    width: 36px;
+    height: 36px;
+    border: 2px solid var(--leaf);
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--leaf);
+  }
+
+  .step-visual:last-child .step-circle { background: var(--leaf); color: var(--forest); }
+
+  .step-body h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: white;
+    margin-bottom: 4px;
+    font-weight: 700;
+  }
+
+  .step-body p { font-size: 13px; color: rgba(255,255,255,0.6); font-family: 'Source Code Pro', monospace; line-height: 1.5; }
+
+  .step-connector {
+    width: 2px;
+    height: 20px;
+    background: rgba(134, 239, 172, 0.2);
+    margin: 4px 0 4px 16px;
+  }
+
+  /* Benefits section */
+  .benefits { background: var(--cream-2); }
+
+  .benefit-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 60px;
+  }
+
+  .benefit-card {
+    background: white;
+    border: 1px solid var(--line);
+    padding: 40px 32px;
+    transition: all 0.3s;
+    position: relative;
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px rgba(13, 43, 26, 0.1);
+  }
+
+  .benefit-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 900;
+    color: var(--leaf-pale);
+    line-height: 1;
+    position: absolute;
+    top: 20px;
+    right: 24px;
+  }
+
+  .benefit-icon {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .benefit-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--forest);
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+
+  .benefit-card p {
+    font-size: 15px;
+    color: var(--text-2);
+    line-height: 1.7;
+  }
+
+  /* Comparison visual section */
+  .compare-section { background: var(--forest); color: white; }
+  .compare-section .eyebrow { color: var(--leaf); }
+  .compare-section .eyebrow::after { background: var(--leaf); }
+  .compare-section h2 { color: white; }
+  .compare-section .section-lead { color: rgba(255,255,255,0.65); }
+
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: rgba(255,255,255,0.08);
+    margin-top: 60px;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .compare-col {
+    padding: 48px 40px;
+    background: var(--forest);
+  }
+
+  .compare-col.good { background: rgba(134, 239, 172, 0.06); }
+
+  .compare-col-title {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .compare-col-title .dot {
+    width: 10px; height: 10px; border-radius: 50%;
+  }
+
+  .compare-col.bad .dot { background: #f87171; }
+  .compare-col.good .dot { background: var(--leaf); }
+
+  .compare-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .compare-icon { font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+
+  .compare-col.bad .compare-item { color: rgba(255,255,255,0.6); }
+  .compare-col.good .compare-item { color: rgba(255,255,255,0.85); }
+
+  /* Sectors section */
+  .sectors { background: var(--cream); }
+
+  .sector-list { margin-top: 60px; }
+
+  .sector-row {
+    display: grid;
+    grid-template-columns: 80px 1fr 200px;
+    gap: 32px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--line);
+    align-items: center;
+    transition: background 0.2s;
+    cursor: default;
+  }
+
+  .sector-row:hover { background: var(--cream-2); margin: 0 -20px; padding: 28px 20px; }
+
+  .sector-icon-box {
+    width: 60px; height: 60px;
+    background: var(--leaf-pale);
+    border: 2px solid var(--forest);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+  }
+
+  .sector-info h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--forest);
+    margin-bottom: 6px;
+  }
+
+  .sector-info p { font-size: 14px; color: var(--text-2); line-height: 1.6; }
+
+  .sector-meta {
+    text-align: right;
+  }
+
+  .sector-meta .method {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 12px;
+    color: var(--forest-3);
+    background: var(--leaf-pale);
+    padding: 4px 12px;
+    display: inline-block;
+    margin-bottom: 6px;
+    letter-spacing: 0.05em;
+  }
+
+  .sector-meta .stat {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--forest);
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  /* Q&A section */
+  .qa-section { background: var(--sand); }
+
+  .qa-intro {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .qa-intro-side {
+    position: sticky;
+    top: 90px;
+  }
+
+  .qa-intro-side .section-lead { margin-bottom: 28px; }
+
+  .qa-list { margin-top: 0; }
+
+  .qa-item {
+    border-bottom: 1px solid rgba(13,43,26,0.12);
+    padding: 28px 0;
+  }
+
+  .qa-q {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--forest);
+    margin-bottom: 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 16px;
+  }
+
+  .qa-toggle {
+    width: 28px;
+    height: 28px;
+    border: 2px solid var(--forest);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: var(--forest);
+    transition: all 0.3s;
+    margin-top: 2px;
+  }
+
+  .qa-item.open .qa-toggle {
+    background: var(--forest);
+    color: var(--leaf);
+    transform: rotate(45deg);
+  }
+
+  .qa-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+
+  .qa-item.open .qa-a { max-height: 500px; }
+
+  .qa-a-inner {
+    font-size: 16px;
+    color: var(--text-2);
+    line-height: 1.75;
+    padding-bottom: 12px;
+    font-weight: 300;
+  }
+
+  .qa-a-inner a { color: var(--forest-2); text-decoration: underline; }
+
+  /* Expert CTA */
+  .expert-cta {
+    background: var(--cream-2);
+    border: 2px solid var(--forest);
+    padding: 48px;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .expert-cta .eyebrow { margin-bottom: 12px; }
+  .expert-cta h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: var(--forest);
+    font-weight: 900;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .expert-cta p { font-size: 15px; color: var(--text-2); max-width: 500px; }
+
+  .expert-stats {
+    display: flex;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .e-stat-val {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--forest);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .e-stat-label {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 10px;
+    color: var(--text-3);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .cta-big-btn {
+    background: var(--forest);
+    color: var(--leaf);
+    padding: 18px 36px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 16px;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+  }
+
+  .cta-big-btn:hover { background: var(--forest-3); transform: translateY(-2px); }
+
+  /* Footer */
+  footer {
+    background: var(--forest);
+    color: rgba(255,255,255,0.6);
+    padding: 72px 32px 32px;
+  }
+
+  .footer-inner { max-width: 1200px; margin: 0 auto; }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 64px;
+    margin-bottom: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .f-brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: white;
+    font-weight: 900;
+    margin-bottom: 4px;
+  }
+
+  .f-brand-tag {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 10px;
+    color: var(--leaf);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .f-desc { font-size: 14px; line-height: 1.6; max-width: 280px; margin-bottom: 20px; }
+
+  .f-partner { font-size: 13px; }
+  .f-partner a { color: var(--leaf); text-decoration: underline; }
+
+  .f-col h5 {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+
+  .f-col ul { list-style: none; }
+  .f-col li { margin-bottom: 10px; }
+
+  .f-col a {
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    transition: color 0.2s;
+  }
+
+  .f-col a:hover { color: var(--leaf); }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 11px;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.04em;
+  }
+
+  .footer-bottom a { color: rgba(255,255,255,0.4); }
+  .footer-bottom a:hover { color: var(--leaf); }
+
+  /* Reveal */
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s, transform 0.7s; }
+  .reveal.on { opacity: 1; transform: none; }
+
+  /* Mobile */
+  @media (max-width: 900px) {
+    .nav-wrap { padding: 0 16px; }
+    nav.site-nav { display: none; }
+    .hero { padding: 56px 16px; }
+    .numbar-inner { grid-template-columns: 1fr 1fr; }
+    .num-item { padding: 20px 16px; }
+    .section { padding: 60px 16px; }
+    .explain-grid { grid-template-columns: 1fr; gap: 40px; }
+    .explain-visual { position: static; }
+    .benefit-cards { grid-template-columns: 1fr; }
+    .compare-grid { grid-template-columns: 1fr; }
+    .sector-row { grid-template-columns: 60px 1fr; }
+    .sector-meta { display: none; }
+    .qa-intro { grid-template-columns: 1fr; gap: 0; }
+    .qa-intro-side { position: static; }
+    .expert-cta { grid-template-columns: 1fr; gap: 24px; }
+    .expert-stats { justify-content: center; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    footer { padding: 48px 16px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  Profesyonel yatay sondaj hizmeti için →
+  <a href="https://www.deltek.com.tr" target="_blank" rel="noopener">deltek.com.tr</a>
+</div>
+
+<header>
+  <div class="nav-wrap">
+    <div class="logo">
+      <div class="logo-main">Yatay Sondaj</div>
+      <div class="logo-sub">Kazısız Altyapı Rehberi</div>
+    </div>
+
+    <nav class="site-nav">
+      <a href="#nedir">Nedir?</a>
+      <a href="#avantajlar">Avantajlar</a>
+      <a href="#sektorler">Sektörler</a>
+      <a href="#sorular">Sorular</a>
+      <a href="https://www.deltek.com.tr" target="_blank" rel="noopener" class="nav-cta">Teklif İste →</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-bg-shape"></div>
+    <div class="hero-bg-shape"></div>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-tag">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+      Kazısız Altyapı Hakkında Her Şey
+    </div>
+
+    <h1>Şehrinizin altında<br>neler oluyor biliyor<br><span>musunuz?</span></h1>
+
+    <p class="hero-lead">Yollar kapatılmadan, ağaçlar sökülmeden, hayat sekteye uğramadan — boru ve kablolar nasıl döşeniyor? Yatay sondaj teknolojisini merak edenler için kapsamlı bir rehber.</p>
+
+    <div class="hero-actions">
+      <a href="#nedir" class="btn-primary">Nasıl çalışır? →</a>
+      <a href="#sorular" class="btn-ghost">Sık sorulan sorulara bak</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="numbar">
+  <div class="numbar-inner">
+    <div class="num-item">
+      <div class="num-value">%60<span>+</span></div>
+      <div class="num-label">Şehirde kazı azalması</div>
+    </div>
+    <div class="num-item">
+      <div class="num-value">4.058<span>m</span></div>
+      <div class="num-label">Dünya Rekoru HDD</div>
+    </div>
+    <div class="num-item">
+      <div class="num-value">%8<span>.1</span></div>
+      <div class="num-label">Yıllık sektör büyümesi</div>
+    </div>
+    <div class="num-item">
+      <div class="num-value">2003<span>–</span></div>
+      <div class="num-label">Türkiye'de yaygınlaşma</div>
+    </div>
+  </div>
+</div>
+
+<!-- EXPLAINER SECTION -->
+<section id="nedir" class="section explainer">
+  <div class="section-inner">
+    <div class="eyebrow">Açıklama</div>
+    <h2>Yatay sondaj<br>gerçekten nedir?</h2>
+
+    <div class="explain-grid reveal">
+      <div class="explain-text">
+        <p>Bir düşünün: İstanbul'un kalabalık bir caddesinde doğalgaz hattı döşenecek. Eski yöntemle bu iş haftalar alır, metre metre yol açılır, trafik felç olur, ağaçlar sökülebilir.</p>
+
+        <p><strong>Yatay sondaj</strong> ise bunların hiçbirini gerektirmez. Caddenin iki ucunda birer çukur açılır — biri "giriş", diğeri "çıkış". Aradaki yüzlerce metre, özel bir makineyle <strong>yer altından sessizce geçilir</strong>.</p>
+
+        <p>Makine zemin altında ilerlerken yüzeydeki teknisyen, GPS ve elektromanyetik sensörler sayesinde başlığın tam konumunu, derinliğini ve yönünü izler. Milimetre hassasiyetiyle yönlendirir.</p>
+
+        <div class="highlight">
+          "Bu teknoloji ile 2 km'lik bir boru hattı, trafik kapatılmadan ve yalnızca 2 haftada döşenebiliyor."
+        </div>
+
+        <p>Tünel hazır olduğunda, önceden kaynak edilmiş boru hattı çıkış noktasından makineye doğru çekilir. İş bitti — yol yerinde, çevre temiz, şehir hareketli.</p>
+
+        <p>Bu yönteme teknik adıyla <strong>HDD (Horizontal Directional Drilling)</strong> ya da <strong>yönlendirilebilir yatay delgi</strong> denir. Benzer prensipler üzerine kurulu mikrotünel, boru itme ve pipe bursting gibi başka yöntemler de var — hepsi aynı amaca hizmet eder: <strong>yüzeye dokunmadan yer altına ulaşmak</strong>.</p>
+      </div>
+
+      <div class="explain-visual">
+        <div class="visual-title">// Nasıl Çalışır?</div>
+
+        <div class="step-visual">
+          <div class="step-circle">1</div>
+          <div class="step-body">
+            <h4>Pilot Delgi</h4>
+            <p>Küçük delgi başlığı GPS rehberliğinde zeminde ilerler. Yön ve derinlik anlık kontrol edilir.</p>
+          </div>
+        </div>
+
+        <div class="step-connector"></div>
+
+        <div class="step-visual">
+          <div class="step-circle">2</div>
+          <div class="step-body">
+            <h4>Genişletme</h4>
+            <p>Pilot delik, boru çapının 1.2–1.5 katı olacak şekilde özel kesicilerle büyütülür.</p>
+          </div>
+        </div>
+
+        <div class="step-connector"></div>
+
+        <div class="step-visual">
+          <div class="step-circle">3</div>
+          <div class="step-body">
+            <h4>Boru Çekme</h4>
+            <p>Hazır boru hattı çıkış noktasından makineye doğru çekilir. İşlem tamamlanır.</p>
+          </div>
+        </div>
+
+        <div class="step-connector"></div>
+
+        <div class="step-visual">
+          <div class="step-circle">✓</div>
+          <div class="step-body">
+            <h4>Yüzey Hasarsız</h4>
+            <p>Sadece giriş/çıkış noktaları etkilenir. Yol, ağaç, çevre bozulmaz.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section id="avantajlar" class="section benefits">
+  <div class="section-inner">
+    <div class="eyebrow">Neden Önemli</div>
+    <h2>Şehirlerin neden yatay<br>sondaja ihtiyacı var?</h2>
+    <p class="section-lead">Klasik kazı yöntemiyle karşılaştırıldığında yatay sondajın şehir yaşamı, ekonomi ve çevre için sağladığı somut avantajlar.</p>
+
+    <div class="benefit-cards reveal">
+      <div class="benefit-card">
+        <div class="benefit-num">01</div>
+        <div class="benefit-icon">🚗</div>
+        <h3>Trafik Durmuyor</h3>
+        <p>Açık kazı ile haftalar süren şantiye ve trafik kesintisi, yatay sondaj ile ortadan kalkar. Günlük yaşam sekteye uğramaz. Özellikle İstanbul, Ankara gibi büyük şehirlerde bu fark çok büyük.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-num">02</div>
+        <div class="benefit-icon">🌳</div>
+        <h3>Ağaçlar Yerinde Kalıyor</h3>
+        <p>Klasik kazıda güzergahtaki tüm ağaçlar sökülürdü. Yatay sondaj hem ağaçları hem de peyzajı korur. Şehir yeşilinin sürdürülmesinde kritik rol oynar.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-num">03</div>
+        <div class="benefit-icon">💰</div>
+        <h3>Gerçekte Daha Ucuz</h3>
+        <p>Delgi maliyeti başlangıçta yüksek görünse de yol onarımı, trafik düzenleme, peyzaj restorasyonu hesaba katıldığında toplamda %30–60 daha ekonomik.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-num">04</div>
+        <div class="benefit-icon">⚡</div>
+        <h3>Çok Daha Hızlı</h3>
+        <p>500 metrelik bir hat için açık kazı 3-4 hafta sürerken, yatay sondaj 10-15 günde tamamlanır. Hatta bazı projelerde günde 100 metre üzeri ilerleme mümkün.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-num">05</div>
+        <div class="benefit-icon">🏗️</div>
+        <h3>İmkânsızı Mümkün Kılıyor</h3>
+        <p>Nehir altları, köprüler, demiryolları, orman alanları — klasik kazının ulaşamadığı yerlerde yatay sondaj devreye girer. Bu geçişler olmadan şehirlerin altyapısı bütünlenemez.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-num">06</div>
+        <div class="benefit-icon">🌍</div>
+        <h3>Çevre Dostu</h3>
+        <p>Toprak erozyonu, habitat bozulması, gürültü kirliliği minimize edilir. Hassas ekolojik bölgelerde, koruma altındaki alanlarda tek geçerli yöntem çoğu zaman budur.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARE -->
+<section class="section compare-section">
+  <div class="section-inner">
+    <div class="eyebrow">Karşılaştırma</div>
+    <h2>Klasik kazı mı,<br>yatay sondaj mı?</h2>
+    <p class="section-lead">Aynı projeyi iki farklı yöntemle yapmak arasındaki fark — sayılar konuşuyor.</p>
+
+    <div class="compare-grid reveal">
+      <div class="compare-col bad">
+        <div class="compare-col-title">
+          <span class="dot"></span>
+          Klasik Açık Kazı
+        </div>
+        <div class="compare-item"><span class="compare-icon">⛏️</span>Güzergah boyunca tüm yüzey açılır</div>
+        <div class="compare-item"><span class="compare-icon">🚫</span>Trafik haftalarca kapalı kalır</div>
+        <div class="compare-item"><span class="compare-icon">🌳</span>Güzergahtaki ağaçlar sökülür</div>
+        <div class="compare-item"><span class="compare-icon">📅</span>500 m hat için 3–4 hafta</div>
+        <div class="compare-item"><span class="compare-icon">💸</span>Yol onarımı ekstra maliyet</div>
+        <div class="compare-item"><span class="compare-icon">⚠️</span>Nehir, köprü geçişleri mümkün değil</div>
+        <div class="compare-item"><span class="compare-icon">🔊</span>Yüksek gürültü ve titreşim</div>
+      </div>
+
+      <div class="compare-col good">
+        <div class="compare-col-title">
+          <span class="dot"></span>
+          Yatay Sondaj (HDD)
+        </div>
+        <div class="compare-item"><span class="compare-icon">✅</span>Yalnızca 2 küçük nokta açılır</div>
+        <div class="compare-item"><span class="compare-icon">✅</span>Trafik kesintisi sıfır</div>
+        <div class="compare-item"><span class="compare-icon">✅</span>Ağaçlar, peyzaj korunur</div>
+        <div class="compare-item"><span class="compare-icon">✅</span>500 m hat için 10–15 gün</div>
+        <div class="compare-item"><span class="compare-icon">✅</span>Toplamda %30–60 ekonomik</div>
+        <div class="compare-item"><span class="compare-icon">✅</span>Her türlü geçiş mümkün</div>
+        <div class="compare-item"><span class="compare-icon">✅</span>Minimum gürültü</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTORS -->
+<section id="sektorler" class="section sectors">
+  <div class="section-inner">
+    <div class="eyebrow">Kullanım Alanları</div>
+    <h2>Hayatınızın hangi bölümünde<br>yatay sondaj işin içinde?</h2>
+    <p class="section-lead">Muhtemelen farkında olmadan her gün yatay sondaj sayesinde çalışan bir altyapıya dokunuyorsunuz.</p>
+
+    <div class="sector-list reveal">
+      <div class="sector-row">
+        <div class="sector-icon-box">🔥</div>
+        <div class="sector-info">
+          <h4>Mutfak Ocağınızın Gazı</h4>
+          <p>Şehir gaz ağının büyük bölümü HDD ile döşeniyor. Yolları kapatmadan mahallelerin altına doğalgaz hattı çekiliyor.</p>
+        </div>
+        <div class="sector-meta">
+          <div class="method">HDD</div>
+          <div class="stat">%70+</div>
+          <div class="num-label">Yeni hatlar HDD ile</div>
+        </div>
+      </div>
+
+      <div class="sector-row">
+        <div class="sector-icon-box">📶</div>
+        <div class="sector-info">
+          <h4>Telefonunuzdaki İnternet</h4>
+          <p>Fiber optik altyapının döşenmesinde HDD vazgeçilmez. Türkiye'deki fiber hatların önemli kısmı yatay sondajla döşendi.</p>
+        </div>
+        <div class="sector-meta">
+          <div class="method">HDD</div>
+          <div class="stat">1.000+</div>
+          <div class="num-label">km fiber, yıllık</div>
+        </div>
+      </div>
+
+      <div class="sector-row">
+        <div class="sector-icon-box">💡</div>
+        <div class="sector-info">
+          <h4>Evinizin Elektriği</h4>
+          <p>Yüksek gerilim yeraltı kabloları, şehir içi enerji nakil hatları HDD ile döşeniyor. Sanayi bölgesi bağlantıları da aynı şekilde.</p>
+        </div>
+        <div class="sector-meta">
+          <div class="method">HDD</div>
+          <div class="stat">154 kV</div>
+          <div class="num-label">Gerilim seviyesi</div>
+        </div>
+      </div>
+
+      <div class="sector-row">
+        <div class="sector-icon-box">💧</div>
+        <div class="sector-info">
+          <h4>Musluktan Gelen Su</h4>
+          <p>Şehir içme suyu ana hatları ve yenileme projeleri. Köprü ve nehir geçişlerinde su altyapısı HDD ile taşınıyor.</p>
+        </div>
+        <div class="sector-meta">
+          <div class="method">HDD / Mikrotünel</div>
+          <div class="stat">800 mm</div>
+          <div class="num-label">HDPE çap</div>
+        </div>
+      </div>
+
+      <div class="sector-row">
+        <div class="sector-icon-box">🏗️</div>
+        <div class="sector-info">
+          <h4>Köprü ve Yol Altı Geçişler</h4>
+          <p>Otoyollar, demiryolları, köprüler ve hassas yapıların altından boru ve kablo geçişi. Bu geçişler açık kazıyla neredeyse imkansız.</p>
+        </div>
+        <div class="sector-meta">
+          <div class="method">HDD / Boru İtme</div>
+          <div class="stat">2.000+</div>
+          <div class="num-label">metre tek geçiş</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Q&A -->
+<section id="sorular" class="section qa-section">
+  <div class="section-inner">
+    <div class="qa-intro">
+      <div class="qa-intro-side">
+        <div class="eyebrow">Sorular</div>
+        <h2>Merak edilen sorular</h2>
+        <p class="section-lead">Yatay sondaj hakkında en çok sorulan soruları yanıtladık.</p>
+
+        <div class="expert-stats">
+          <div>
+            <div class="e-stat-val">20+</div>
+            <div class="e-stat-label">Yıl tecrübe</div>
+          </div>
+          <div>
+            <div class="e-stat-val">196k</div>
+            <div class="e-stat-label">Metre delgi</div>
+          </div>
+          <div>
+            <div class="e-stat-val">324</div>
+            <div class="e-stat-label">İş ortağı</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-list">
+        <div class="qa-item">
+          <div class="qa-q">Yatay sondaj her yerde yapılabilir mi?
+            <span class="qa-toggle">+</span>
+          </div>
+          <div class="qa-a">
+            <div class="qa-a-inner">Hayır, bazı zemin koşullarında yatay sondaj (HDD) zorlanır. Çok büyük kaya blokları, aşırı yüksek yeraltı suyu basıncı veya karmaşık formasyon içeren zeminlerde farklı kazısız yöntemler (mikrotünel, boru itme) tercih edilir. Bu yüzden her projede zemin etüdü zorunludur.</div>
+          </div>
+        </div>
+
+        <div class="qa-item">
+          <div class="qa-q">Yatay sondaj sırasında kullanılan çamur zehirli mi?
+            <span class="qa-toggle">+</span>
+          </div>
+          <div class="qa-a">
+            <div class="qa-a-inner">Hayır. Kullanılan "bentonit çamuru" aslında doğal bir kil mineralinin suyla karışımıdır. Gıda endüstrisi dahil pek çok alanda güvenle kullanılan bir malzemedir. Büyük miktarların su kaynaklarına karışması istenmez ama düzgün yönetildiğinde çevresel riski minimumdur. Modern HDD operasyonlarında çamur geri dönüşüm sistemleri kullanılır.</div>
+          </div>
+        </div>
+
+        <div class="qa-item">
+          <div class="qa-q">Yatay sondaj gürültülü müdür?
+            <span class="qa-toggle">+</span>
+          </div>
+          <div class="qa-a">
+            <div class="qa-a-inner">Açık kazıya kıyasla çok daha sessizdir. HDD makinesinin sesi büyük bir kamyon motorunun gürültüsü kadardır. Kısa süreli çalışma (günde 8-10 saat) düşünüldüğünde şehir hayatına etkisi minimumdur. Ayrıca kazı yapılmadığı için titreşim kaynaklı bina hasarı riski yoktur.</div>
+          </div>
+        </div>
+
+        <div class="qa-item">
+          <div class="qa-q">Bir evde yakınımda yatay sondaj çalışması varsa endişelenmeli miyim?
+            <span class="qa-toggle">+</span>
+          </div>
+          <div class="qa-a">
+            <div class="qa-a-inner">Genel olarak endişe gerektirmez. Profesyonel HDD firmaları, çalışma öncesinde tüm mevcut altyapıyı tespit eder ve güzergahı buna göre planlar. Delgi sırasında sürekli konum takibi yapılır. Yer altınızdaki mevcut borulara zarar verilmesi durumunda sorumlu firma tüm giderleri karşılar. Büyük makineler gördüğünüzde bu normal bir altyapı projesidir.</div>
+          </div>
+        </div>
+
+        <div class="qa-item">
+          <div class="qa-q">Yatay sondaj ile kaç metre boru döşenebilir?
+            <span class="qa-toggle">+</span>
+          </div>
+          <div class="qa-a">
+            <div class="qa-a-inner">Pratikte çoğu proje 200–2000 metre arasında. Ancak teknolojinin sınırı çok daha yüksek — 2017'de Miami'de gerçekleştirilen 4.058 metrelik geçiş şu anki dünya rekoru. Türkiye'de de Çanakkale ve İstanbul boğazlarında yapılan geçişler 1500 metreyi aşıyor.</div>
+          </div>
+        </div>
+
+        <div class="qa-item">
+          <div class="qa-q">Türkiye'de kimler yatay sondaj yapabiliyor?
+            <span class="qa-toggle">+</span>
+          </div>
+          <div class="qa-a">
+            <div class="qa-a-inner">Türkiye'de 40-60 arası aktif HDD firması bulunuyor ama kurumsal nitelikte yalnızca 10-15 firma var. İyi bir HDD firmasını ayırt etmek için: ekipman parkını, referanslarını, NASTT veya <a href="https://www.deltek.com.tr" target="_blank" rel="noopener">DCA üyeliğini</a> sorgulamak faydalı. 20+ yıllık deneyime sahip <a href="https://www.deltek.com.tr" target="_blank" rel="noopener">Deltek</a>, Türkiye'nin köklü firmalarından biridir.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Expert CTA -->
+    <div class="expert-cta reveal">
+      <div>
+        <div class="eyebrow">Profesyonel Destek</div>
+        <h3>Projeniz için deneyimli<br>bir ekip arıyorsanız</h3>
+        <p>20 yılı aşkın tecrübe ve 196.000+ metrelik delgi referansıyla Türkiye'nin önde gelen kazısız altyapı firması Deltek, her ölçekte projeye ücretsiz keşif ve fizibilite desteği sunuyor.</p>
+      </div>
+      <a href="https://www.deltek.com.tr" target="_blank" rel="noopener" class="cta-big-btn">
+        Deltek.com.tr →
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="f-brand-name">Yatay Sondaj</div>
+        <span class="f-brand-tag">// Kazısız Altyapı Rehberi</span>
+        <p class="f-desc">Yatay sondaj ve kazısız altyapı hakkında genel kamuoyuna yönelik bağımsız bir bilgi platformu.</p>
+        <p class="f-partner">İçerik desteği: <a href="https://www.deltek.com.tr" target="_blank" rel="noopener">Deltek Kazısız Yatay Delgi Teknolojileri</a></p>
+      </div>
+
+      <div class="f-col">
+        <h5>Konular</h5>
+        <ul>
+          <li><a href="#nedir">Yatay Sondaj Nedir?</a></li>
+          <li><a href="#avantajlar">Avantajlar</a></li>
+          <li><a href="#sektorler">Sektörler</a></li>
+          <li><a href="#sorular">Sorular</a></li>
+        </ul>
+      </div>
+
+      <div class="f-col">
+        <h5>Kaynaklar</h5>
+        <ul>
+          <li><a href="https://www.yataydelgi.com" target="_blank" rel="noopener">Teknik Rehber</a></li>
+          <li><a href="https://www.yataydelgi.net" target="_blank" rel="noopener">Proje Portalı</a></li>
+          <li><a href="https://www.deltek.com.tr" target="_blank" rel="noopener">Profesyonel Destek</a></li>
+        </ul>
+      </div>
+
+      <div class="f-col">
+        <h5>İletişim</h5>
+        <ul>
+          <li><a href="https://www.deltek.com.tr" target="_blank" rel="noopener">deltek.com.tr</a></li>
+          <li><a href="tel:+908508883585">+90 850 888 3585</a></li>
+          <li><a href="https://www.deltek.com.tr#iletisim" target="_blank" rel="noopener">Teklif İste</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Yatay Sondaj Bilgi Platformu · Tüm hakları saklıdır</span>
+      <span>Bağımsız bilgi kaynağı · <a href="https://www.deltek.com.tr" target="_blank" rel="noopener">Deltek</a> desteğiyle</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // FAQ toggle
+  document.querySelectorAll('.qa-q').forEach(q => {
+    q.addEventListener('click', () => {
+      q.parentElement.classList.toggle('open');
+    });
+  });
+
+  // Reveal
+  const obs = new IntersectionObserver(e => {
+    e.forEach(el => { if (el.isIntersecting) { el.target.classList.add('on'); obs.unobserve(el.target); } });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
